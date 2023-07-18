@@ -1,0 +1,260 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "poppins";
+  src: url("../assets/fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: "poppins-bold";
+  src: url("../assets/fonts/Poppins-ExtraBold.ttf");
+}
+* {
+  font-family: "poppins";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: #68088A;
+  color: #FFFFFF;
+  display: flex;
+  padding: 10px 20px;
+  width: 100%;
+  justify-content: space-between;
+}
+.navbar .nav-right {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto 0;
+}
+.navbar .nav-right h3 {
+  padding: 0 20px;
+  margin: auto 0;
+  cursor: pointer;
+}
+.navbar .nav-right button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.navbar .nav-right button h3 {
+  color: #68088A;
+}
+
+.header {
+  background-image: url("../../assets/img/xenia-header.png");
+  background-position: center;
+  background-size: cover;
+  padding-top: 56.25%; /* Hauteur proportionnelle à la largeur (9/16) */
+  position: relative;
+  height: 100vh;
+}
+.header h1 {
+  color: white;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 40%;
+  top: 100px;
+  left: 100px;
+  position: absolute;
+  font-family: "poppins-bold";
+  line-height: 70px;
+}
+.header .header-card {
+  background: rgba(255, 255, 255, 0.649);
+  position: absolute;
+  border-radius: 15px;
+  top: 400px;
+  width: 40%;
+  height: 200px;
+  margin-left: 100px;
+}
+.header .header-card h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  padding-top: 10px;
+  font-weight: 800;
+}
+.header .header-card .header-card-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+.header .header-card .header-card-content p {
+  margin: auto 0;
+  padding: 0 20px;
+  font-size: 1.3rem;
+}
+.header .header-card .header-card-content h2 {
+  margin: auto 0;
+  font-size: 2.5rem;
+  color: #68088A;
+  font-family: "poppins-bold";
+}
+.header .header-card .star-icon {
+  width: 120px;
+  height: 120px;
+  background: url("../../assets/img/star-icon.svg") center no-repeat;
+  background-size: 120px;
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+}
+.header .header-card .star-icon p {
+  margin-top: 30px;
+  font-weight: 800;
+}
+
+.body {
+  width: 100%;
+}
+.body p {
+  background-color: #CA69CC;
+  color: white;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 70px;
+  padding-right: 70px;
+  font-size: 2.3rem;
+  height: 100%;
+  font-weight: 700;
+}
+.body .xenia-cards img {
+  margin-top: 100px;
+  width: 100%;
+  height: 100%;
+}
+
+.form-title {
+  display: flex;
+}
+.form-title .form-title-content {
+  display: flex;
+  margin: 0 auto;
+}
+.form-title img {
+  height: 200px;
+  margin: 0 auto;
+}
+.form-title h2 {
+  text-align: center;
+  justify-content: center;
+  margin: auto 0 20px auto;
+  font-size: 3rem;
+  margin-left: 30px;
+  font-family: "poppins-bold";
+  color: #68088A;
+  font-style: italic;
+}
+
+form {
+  width: 65%;
+  background-color: #CA69CC;
+  color: white;
+  border-radius: 40px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 50px 100px;
+  font-size: 1.5rem;
+}
+form input[type=radio] {
+  display: none;
+}
+form .radio-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: aliceblue;
+  display: inline-flex;
+  margin: 30px 30px 30px 0;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+form .radio-container span {
+  font-size: 16px;
+  font-weight: bold;
+  color: grey;
+}
+form .radio-container-genre {
+  width: 70px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: aliceblue;
+  display: inline-flex;
+  margin: 10px 30px 30px 0;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+form .radio-container-genre span {
+  font-size: 16px;
+  font-weight: bold;
+  color: grey;
+}
+form .commune {
+  margin-top: 10px;
+  width: 100%;
+  height: 45px;
+  padding-left: 30px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 3px;
+}
+form .cp {
+  width: 40%;
+  height: 45px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 3px;
+}
+form .nom {
+  width: 100%;
+  height: 45px;
+  padding-left: 30px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 3px;
+}
+form .phone {
+  margin-top: 20px;
+  display: flex;
+}
+form .phone .phone-logo {
+  width: 45px;
+  margin: auto 0;
+  text-align: center;
+  bottom: 0;
+}
+form .phone .phone-number {
+  width: 40%;
+  height: 45px;
+  margin-left: 30px;
+  padding-left: 30px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 3px;
+}
+form .phone button {
+  margin-left: auto;
+  padding: auto 30px;
+  width: 200px;
+  background-color: #68088A;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}/*# sourceMappingURL=index.css.map */

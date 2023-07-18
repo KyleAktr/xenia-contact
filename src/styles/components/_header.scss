@@ -1,0 +1,79 @@
+.header {
+    background-image: url('../../assets/img/xenia-header.png');
+    background-position: center;
+    background-size: cover;
+    padding-top: 56.25%; /* Hauteur proportionnelle à la largeur (9/16) */
+    position: relative;
+    height: 100vh;
+
+    & h1 {
+        color: white;
+        font-size: 3rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 40%;
+        top: 100px;
+        left: 100px;
+        position: absolute;
+        font-family: 'poppins-bold';
+        line-height: 70px;
+    }
+
+    & .header-card {
+        background: rgba(255, 255, 255, 0.649);
+        position: absolute;
+        border-radius: 15px;
+        top: 400px;
+        width: 40%;
+        height: 200px;
+        margin-left: 100px;
+
+        & h3 {
+            display: flex;
+            justify-content: center;
+            font-size: 1.5rem;
+            padding-top: 10px;
+            font-weight: 800;
+        }
+
+        & .header-card-content {
+            display: flex;
+            justify-content: center;
+            margin-top: 35px;
+
+            & p {
+                margin: auto 0;
+                padding: 0 20px;
+                font-size: 1.3rem;
+            }
+
+            & h2 {
+                margin: auto 0;
+                font-size: 2.5rem;
+                color: #68088A;
+                font-family: 'poppins-bold';
+            }
+
+        }
+
+        & .star-icon {
+            width: 120px;
+            height: 120px;
+            background: url('../../assets/img/star-icon.svg') center no-repeat;
+
+            background-size: 120px;
+            text-align: center;
+            justify-content: center;
+            position: absolute;
+            bottom: -40px;
+            right: -40px;
+
+            & p {
+                margin-top: 30px;
+                font-weight: 800;
+            }
+        }
+
+    }
+}
