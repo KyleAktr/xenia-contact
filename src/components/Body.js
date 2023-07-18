@@ -5,7 +5,7 @@ const Body = () => {
   return (
     <div className="body">
       <p>
-        des milliers de Français rentabilisent leur m2 inutilisés en les louant,
+        Des milliers de Français rentabilisent leur m2 inutilisés en les louant,
         pourquoi pas vous ?{" "}
       </p>
       <div className="xenia-cards">
