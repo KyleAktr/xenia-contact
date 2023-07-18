@@ -133,6 +133,40 @@
   height: 100%;
 }
 
+.activeLink {
+  background-color: #68088a;
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  display: inline-flex;
+  margin: 30px 30px 30px 0;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.activeLink span {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
+.activeLinkGender {
+  background-color: #68088a;
+  width: 70px;
+  height: 40px;
+  border-radius: 3px;
+  display: inline-flex;
+  margin: 30px 30px 30px 0;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.activeLinkGender span {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+
 .form-title {
   display: flex;
 }
@@ -151,13 +185,13 @@
   font-size: 3rem;
   margin-left: 30px;
   font-family: "poppins-bold";
-  color: #68088A;
+  color: #68088a;
   font-style: italic;
 }
 
 form {
   width: 65%;
-  background-color: #CA69CC;
+  background-color: #ca69cc;
   color: white;
   border-radius: 40px;
   margin: 0 auto;
@@ -184,7 +218,7 @@ form .radio-container span {
   font-weight: bold;
   color: grey;
 }
-form .radio-container-genre {
+form .radio-container-gender {
   width: 70px;
   height: 40px;
   border-radius: 3px;
@@ -195,7 +229,7 @@ form .radio-container-genre {
   justify-content: center;
   cursor: pointer;
 }
-form .radio-container-genre span {
+form .radio-container-gender span {
   font-size: 16px;
   font-weight: bold;
   color: grey;
@@ -250,7 +284,7 @@ form .phone button {
   margin-left: auto;
   padding: auto 30px;
   width: 200px;
-  background-color: #68088A;
+  background-color: #68088a;
   color: white;
   border: none;
   border-radius: 20px;
