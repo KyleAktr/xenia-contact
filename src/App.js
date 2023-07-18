@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Body from "./components/Body";
 import Form from "./components/Form";
 import { Element } from "react-scroll";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Element name="becomeHost">
         <Form />
       </Element>
+      <Footer />
     </>
   );
 };
