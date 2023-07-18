@@ -28,6 +28,11 @@
   text-align: center;
   margin: auto 0;
 }
+@media screen and (max-width: 530px) {
+  .navbar .nav-right {
+    display: none;
+  }
+}
 .navbar .nav-right h3 {
   padding: 0 20px;
   margin: auto 0;
@@ -41,15 +46,32 @@
   color: #68088A;
 }
 
-.header {
-  background-image: url("../../assets/img/xenia-header.png");
+.header-responsive {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .header-responsive {
+    display: block;
+  }
+}
+.header-responsive img {
+  width: 100%;
+}
+
+.header-content {
+  background-image: url("../../assets/img/xenia-header(1).png");
   background-position: center;
   background-size: cover;
   padding-top: 56.25%; /* Hauteur proportionnelle à la largeur (9/16) */
   position: relative;
   height: 100vh;
 }
-.header h1 {
+@media screen and (max-width: 480px) {
+  .header-content {
+    display: none;
+  }
+}
+.header-content h1 {
   color: white;
   font-size: 3rem;
   display: flex;
@@ -62,7 +84,31 @@
   font-family: "poppins-bold";
   line-height: 70px;
 }
-.header .header-card {
+@media screen and (max-width: 1180px) {
+  .header-content h1 {
+    font-size: 2.5rem;
+    top: 50px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .header-content h1 {
+    font-size: 2rem;
+    line-height: 60px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .header-content h1 {
+    font-size: 1.7rem;
+    line-height: 50px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .header-content h1 {
+    font-size: 1.6rem;
+    line-height: 40px;
+  }
+}
+.header-content .header-card {
   background: rgba(255, 255, 255, 0.649);
   position: absolute;
   border-radius: 15px;
@@ -71,30 +117,78 @@
   height: 200px;
   margin-left: 100px;
 }
-.header .header-card h3 {
+@media screen and (max-width: 1180px) {
+  .header-content .header-card {
+    top: 300px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .header-content .header-card {
+    top: 250px;
+    height: 180px;
+  }
+}
+.header-content .header-card h3 {
   display: flex;
   justify-content: center;
   font-size: 1.5rem;
   padding-top: 10px;
   font-weight: 800;
 }
-.header .header-card .header-card-content {
+@media screen and (max-width: 1050px) {
+  .header-content .header-card h3 {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 810px) {
+  .header-content .header-card h3 {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 680px) {
+  .header-content .header-card h3 {
+    display: none;
+  }
+}
+.header-content .header-card .header-card-content {
   display: flex;
   justify-content: center;
   margin-top: 35px;
 }
-.header .header-card .header-card-content p {
+@media screen and (max-width: 810px) {
+  .header-content .header-card .header-card-content {
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 680px) {
+  .header-content .header-card .header-card-content {
+    margin-top: 25px;
+  }
+}
+.header-content .header-card .header-card-content p {
   margin: auto 0;
   padding: 0 20px;
   font-size: 1.3rem;
 }
-.header .header-card .header-card-content h2 {
+@media screen and (max-width: 1050px) {
+  .header-content .header-card .header-card-content p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 680px) {
+  .header-content .header-card .header-card-content p {
+    font-weight: 800;
+  }
+}
+.header-content .header-card .header-card-content h2 {
   margin: auto 0;
   font-size: 2.5rem;
   color: #68088A;
   font-family: "poppins-bold";
 }
-.header .header-card .star-icon {
+.header-content .header-card .star-icon {
   width: 120px;
   height: 120px;
   background: url("../../assets/img/star-icon.svg") center no-repeat;
@@ -105,7 +199,13 @@
   bottom: -40px;
   right: -40px;
 }
-.header .header-card .star-icon p {
+@media screen and (max-width: 1000px) {
+  .header-content .header-card .star-icon {
+    bottom: -60px;
+    right: -60px;
+  }
+}
+.header-content .header-card .star-icon p {
   margin-top: 30px;
   font-weight: 800;
 }
@@ -127,10 +227,47 @@
   height: 100%;
   font-weight: 700;
 }
+@media screen and (max-width: 1000px) {
+  .body p {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 885px) {
+  .body p {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .body p {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .body .xenia-cards {
+    display: none;
+  }
+}
 .body .xenia-cards img {
   margin-top: 100px;
   width: 100%;
   height: 100%;
+}
+.body .xenia-real-cards {
+  display: none;
+}
+.body .xenia-real-cards .card {
+  background-color: #68088A;
+  width: 60%;
+  margin: 20px auto 20px auto;
+  border-radius: 25px;
+  padding: 50px 30px;
+  text-align: center;
+  color: white;
+}
+@media screen and (max-width: 480px) {
+  .body .xenia-real-cards {
+    display: block;
+  }
 }
 
 .activeLink {
@@ -143,6 +280,16 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+@media screen and (max-width: 850px) {
+  .activeLink {
+    margin-right: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .activeLink {
+    margin-right: 10px;
+  }
 }
 .activeLink span {
   font-size: 16px;
@@ -178,6 +325,16 @@
   height: 200px;
   margin: 0 auto;
 }
+@media screen and (max-width: 1000px) {
+  .form-title img {
+    height: 150px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .form-title img {
+    display: none;
+  }
+}
 .form-title h2 {
   text-align: center;
   justify-content: center;
@@ -187,6 +344,16 @@
   font-family: "poppins-bold";
   color: #68088a;
   font-style: italic;
+}
+@media screen and (max-width: 1000px) {
+  .form-title h2 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 850px) {
+  .form-title h2 {
+    font-size: 2rem;
+  }
 }
 
 form {
@@ -198,6 +365,26 @@ form {
   margin-bottom: 50px;
   padding: 50px 100px;
   font-size: 1.5rem;
+}
+@media screen and (max-width: 1000px) {
+  form {
+    padding: 50px 50px;
+  }
+}
+@media screen and (max-width: 650px) {
+  form {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 850px) {
+  form h3 {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (max-width: 850px) {
+  form label {
+    font-size: 1.1rem;
+  }
 }
 form input[type=radio] {
   display: none;
@@ -212,6 +399,16 @@ form .radio-container {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+@media screen and (max-width: 850px) {
+  form .radio-container {
+    margin-right: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  form .radio-container {
+    margin-right: 10px;
+  }
 }
 form .radio-container span {
   font-size: 16px;
@@ -253,6 +450,11 @@ form .cp {
   border: none;
   border-radius: 3px;
 }
+@media screen and (max-width: 850px) {
+  form .cp {
+    width: 60%;
+  }
+}
 form .nom {
   width: 100%;
   height: 45px;
@@ -265,14 +467,23 @@ form .phone {
   margin-top: 20px;
   display: flex;
 }
-form .phone .phone-logo {
+@media screen and (max-width: 850px) {
+  form .phone {
+    display: block;
+  }
+}
+form .phone .phone-logo-number {
+  display: flex;
+  margin-top: 20px;
+}
+form .phone .phone-logo-number .phone-logo {
   width: 45px;
   margin: auto 0;
   text-align: center;
   bottom: 0;
 }
-form .phone .phone-number {
-  width: 40%;
+form .phone .phone-logo-number .phone-number {
+  width: 60%;
   height: 45px;
   margin-left: 30px;
   padding-left: 30px;
@@ -280,10 +491,15 @@ form .phone .phone-number {
   border: none;
   border-radius: 3px;
 }
+@media screen and (max-width: 480px) {
+  form .phone .phone-logo-number .phone-number {
+    width: 80%;
+  }
+}
 form .phone button {
   margin-left: auto;
   padding: auto 30px;
-  width: 200px;
+  width: 300px;
   background-color: #68088a;
   color: white;
   border: none;
@@ -291,4 +507,19 @@ form .phone button {
   font-size: 1.5rem;
   font-weight: 700;
   cursor: pointer;
+}
+@media screen and (max-width: 850px) {
+  form .phone button {
+    display: flex;
+    margin: 20px auto 0 auto;
+    padding: 10px 75px;
+  }
+}
+@media screen and (max-width: 480px) {
+  form .phone button {
+    width: 250px;
+    font-size: 1.2rem;
+    padding: 10px 25px 10px 25px;
+    justify-content: center;
+  }
 }/*# sourceMappingURL=index.css.map */

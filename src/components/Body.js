@@ -14,6 +14,19 @@ const Body = () => {
           alt="image expliquant comment récupérer un devis ?"
         />
       </div>
+      <div className="xenia-real-cards">
+        <div className="card">
+          <h4>
+            Un conseiller vous appelle pour construire votre dossier de Logeuse
+          </h4>
+        </div>
+        <div className="card">
+          <h4>Vous choisissez votre locataire et la durée de la location</h4>
+        </div>
+        <div className="card">
+          <h4>Vous empochez vos euros dès le premier jour !</h4>
+        </div>
+      </div>
     </div>
   );
 };

@@ -12,6 +12,10 @@
         text-align: center;
         margin: auto 0;
 
+        @media screen and (max-width: 530px){
+            display: none;
+        }
+
         & h3 {
             padding: 0 20px;
             margin: auto 0;
