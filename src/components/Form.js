@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import Phone from "../assets/img/phone.svg";
 import FormImg from "../assets/img/xenia-img-form.png";
+import { init } from "@emailjs/browser";
+init(process.env.ID);
 
 const Form = () => {
   const [selectedRoom, setSelectedRoom] = useState(undefined);
@@ -14,6 +17,21 @@ const Form = () => {
     setSelectedGender(e.target.value);
   };
 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_z7b1qld",
+        "template_fttl52r",
+        form.current,
+        process.env.REACT_APP_ID
+      )
+      .then(form.current.reset(), alert("Message envoyé"));
+  };
+
   return (
     <div className="form">
       <div className="form-title">
@@ -22,7 +40,7 @@ const Form = () => {
           <h2>Ca m'intéresse !</h2>
         </div>
       </div>
-      <form>
+      <form ref={form} onSubmit={sendEmail}>
         <h3>Je propose :</h3>
         <div>
           <label
@@ -67,9 +85,14 @@ const Form = () => {
           <label>chambre(s)</label>
         </div>
         <h3>Sur la commune de :</h3>
-        <input className="commune" type="text" placeholder="Commune" />
+        <input
+          className="commune"
+          name="commune"
+          type="text"
+          placeholder="Commune"
+        />
         <br />
-        <input className="cp" type="text" placeholder="Code postal" />
+        <input className="cp" name="cp" type="text" placeholder="Code postal" />
         <h3>Je suis :</h3>
         <div>
           <label
@@ -85,7 +108,7 @@ const Form = () => {
               value={"Mr"}
               onChange={handleGenderChange}
             />
-            <span>Mme</span>
+            <span>Mr</span>
           </label>
           <label
             className={`${
@@ -100,13 +123,23 @@ const Form = () => {
               value={"Mme"}
               onChange={handleGenderChange}
             />
-            <span>Mr</span>
+            <span>Mme</span>
           </label>
         </div>
-        <input className="nom" type="text" placeholder="Prénom NOM" />
+        <input
+          className="nom"
+          name="nom"
+          type="text"
+          placeholder="Prénom NOM"
+        />
         <div className="phone">
           <img className="phone-logo" src={Phone} alt="phone logo" />
-          <input className="phone-number" type="text" placeholder="Téléphone" />
+          <input
+            className="phone-number"
+            name="phone"
+            type="text"
+            placeholder="Téléphone"
+          />
           <button type="submit">être appelé</button>
         </div>
       </form>
