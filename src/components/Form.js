@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Phone from "../assets/img/phone.svg";
 import FormImg from "../assets/img/xenia-img-form.png";
 
 const Form = () => {
+  const [selectedRoom, setSelectedRoom] = useState(undefined);
+  const [selectedGender, setSelectedGender] = useState(undefined);
+
+  const handleRoomChange = (e) => {
+    setSelectedRoom(e.target.value);
+  };
+
+  const handleGenderChange = (e) => {
+    setSelectedGender(e.target.value);
+  };
+
   return (
     <div className="form">
       <div className="form-title">
@@ -14,16 +25,43 @@ const Form = () => {
       <form>
         <h3>Je propose :</h3>
         <div>
-          <label className="radio-container">
-            <input type="radio" name="chambre" value={1} />
+          <label
+            className={` ${
+              selectedRoom === "1" ? "activeLink" : "radio-container"
+            }`}
+          >
+            <input
+              type="radio"
+              name="chambre"
+              value={1}
+              onChange={handleRoomChange}
+            />
             <span>1</span>
           </label>
-          <label className="radio-container">
-            <input type="radio" name="chambre" value={2} />
+          <label
+            className={` ${
+              selectedRoom === "2" ? "activeLink" : "radio-container"
+            }`}
+          >
+            <input
+              type="radio"
+              name="chambre"
+              value={2}
+              onChange={handleRoomChange}
+            />
             <span>2</span>
           </label>
-          <label className="radio-container">
-            <input type="radio" name="chambre" value={3} />
+          <label
+            className={`${
+              selectedRoom === "3" ? "activeLink" : "radio-container"
+            }`}
+          >
+            <input
+              type="radio"
+              name="chambre"
+              value={3}
+              onChange={handleRoomChange}
+            />
             <span>3</span>
           </label>
           <label>chambre(s)</label>
@@ -34,12 +72,34 @@ const Form = () => {
         <input className="cp" type="text" placeholder="Code postal" />
         <h3>Je suis :</h3>
         <div>
-          <label className="radio-container-genre">
-            <input type="radio" name="sexe" value={"Mr"} />
+          <label
+            className={`${
+              selectedGender === "Mr"
+                ? "activeLinkGender"
+                : "radio-container-gender"
+            }`}
+          >
+            <input
+              type="radio"
+              name="sexe"
+              value={"Mr"}
+              onChange={handleGenderChange}
+            />
             <span>Mme</span>
           </label>
-          <label className="radio-container-genre">
-            <input type="radio" name="sexe" value={"Mme"} />
+          <label
+            className={`${
+              selectedGender === "Mme"
+                ? "activeLinkGender"
+                : "radio-container-gender"
+            }`}
+          >
+            <input
+              type="radio"
+              name="sexe"
+              value={"Mme"}
+              onChange={handleGenderChange}
+            />
             <span>Mr</span>
           </label>
         </div>
