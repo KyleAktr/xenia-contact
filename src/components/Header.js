@@ -1,8 +1,12 @@
 import React from "react";
+import HeaderResponsive from "../assets/img/xenia-header-responsive.png";
 
 const Header = () => {
   return (
     <div className="header">
+      <div className="header-responsive">
+        <img src={HeaderResponsive} alt="header xenia" />
+      </div>
       <div className="header-content">
         <h1>Devenez LOGEUSE et rentabilisez vos m² inutiles</h1>
         <div className="header-card">

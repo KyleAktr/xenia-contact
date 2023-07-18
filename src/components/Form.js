@@ -133,13 +133,15 @@ const Form = () => {
           placeholder="Prénom NOM"
         />
         <div className="phone">
-          <img className="phone-logo" src={Phone} alt="phone logo" />
-          <input
-            className="phone-number"
-            name="phone"
-            type="text"
-            placeholder="Téléphone"
-          />
+          <div className="phone-logo-number">
+            <img className="phone-logo" src={Phone} alt="phone logo" />
+            <input
+              className="phone-number"
+              name="phone"
+              type="text"
+              placeholder="Téléphone"
+            />
+          </div>
           <button type="submit">être appelé</button>
         </div>
       </form>
