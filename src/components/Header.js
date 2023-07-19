@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderResponsive from "../assets/img/xenia-header-responsive.png";
+import HeaderResponsive from "../assets/img/xenia-header-responsive(1).png";
 
 const Header = () => {
   return (

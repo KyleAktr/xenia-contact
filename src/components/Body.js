@@ -1,5 +1,5 @@
 import React from "react";
-import xeniaCard from "../assets/img/xenia-cards(1).png";
+import xeniaCard from "../assets/img/xenia-cards(2).png";
 
 const Body = () => {
   return (
