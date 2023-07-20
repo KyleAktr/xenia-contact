@@ -85,17 +85,16 @@ form {
   background-color: #ca69cc;
   color: white;
   border-radius: 40px;
-  // height: 500px;
   margin: 0 auto;
   margin-bottom: 50px;
   padding: 50px 100px;
   font-size: 1.5rem;
 
   @media screen and (max-width: 1000px) {
-    padding: 50px 50px;
+    padding: 50px 20px;
 }
   @media screen and (max-width: 650px) {
-    width: 80%;
+    width: 90%;
 }
 
   & h3 {
@@ -113,11 +112,23 @@ form {
     display: none;
   }
 
+  & input[type="text"] {
+   background-color: #ddccdd;
+  }
+
+  & input::placeholder {
+    color: grey;
+
+    @media screen and (max-width: 480px) {
+      font-size: 0.9rem;
+  }
+  }
+
   & .radio-container {
     width: 40px;
     height: 40px;
     border-radius: 3px;
-    background-color: aliceblue;
+    background-color: #ddccdd;
     display: inline-flex;
     margin: 30px 30px 30px 0;
     align-items: center;
@@ -134,14 +145,14 @@ form {
 
   & .radio-container span {
     font-size: 16px;
-    font-weight: bold;
+    // font-weight: bold;
     color: grey;
   }
   & .radio-container-gender {
     width: 70px;
     height: 40px;
     border-radius: 3px;
-    background-color: aliceblue;
+    background-color: #ddccdd;
     display: inline-flex;
     margin: 10px 30px 30px 0;
     align-items: center;
@@ -150,7 +161,7 @@ form {
   }
   & .radio-container-gender span {
     font-size: 16px;
-    font-weight: bold;
+    // font-weight: bold;
     color: grey;
   }
 
@@ -162,6 +173,11 @@ form {
     font-size: 1.3rem;
     border: none;
     border-radius: 3px;
+
+    @media screen and (max-width: 480px) {
+      font-size: 0.9rem;
+      padding-left: 10px;
+  }
   }
   & .cp {
     width: 40%;
@@ -176,6 +192,10 @@ form {
     @media screen and (max-width: 850px) {
       width: 75%;
   }
+  @media screen and (max-width: 480px) {
+    font-size: 0.9rem;
+    padding-left: 10px;
+}
   }
 
   & .nom {
@@ -185,6 +205,11 @@ form {
     font-size: 1.3rem;
     border: none;
     border-radius: 3px;
+
+    @media screen and (max-width: 480px) {
+      font-size: 0.9rem;
+      padding-left: 10px;
+  }
   }
 
   & .phone {
@@ -194,6 +219,10 @@ form {
     @media screen and (max-width: 850px) {
       display: block;
   }
+  @media screen and (max-width: 480px) {
+    font-size: 0.9rem;
+    padding-left: 10px;
+}
     & .phone-logo-number {
       display: flex;
       margin-top: 20px;
@@ -203,6 +232,10 @@ form {
             margin: auto 0;
             text-align: center;
             bottom: 0;
+
+            @media screen and (max-width: 480px) {
+              width: 30px;
+          }
           }
       
           & .phone-number {
@@ -217,7 +250,9 @@ form {
 
             @media screen and (max-width: 480px) {
               width: 80%;
-          }
+              font-size: 0.9rem;
+              padding-left: 10px;
+            }
           }
     }
 
@@ -241,6 +276,12 @@ form {
       @media screen and (max-width: 480px) {
         width: 250px;
         font-size: 1.2rem;
+        padding: 10px 25px 10px 25px;
+        justify-content: center;
+    }
+      @media screen and (max-width: 450px) {
+        width: 180px;
+        font-size: 1rem;
         padding: 10px 25px 10px 25px;
         justify-content: center;
     }

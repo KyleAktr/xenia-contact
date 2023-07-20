@@ -22,6 +22,18 @@ const Form = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    if (
+      !selectedRoom ||
+      !selectedGender ||
+      !form.current.commune.value ||
+      !form.current.cp.value ||
+      !form.current.nom.value ||
+      !form.current.phone.value
+    ) {
+      alert("Veuillez remplir tous les champs du formulaire");
+      return;
+    }
+
     emailjs
       .sendForm(
         "service_z7b1qld",
@@ -29,7 +41,12 @@ const Form = () => {
         form.current,
         process.env.REACT_APP_ID
       )
-      .then(form.current.reset(), alert("Message envoyé"));
+      .then(
+        form.current.reset(),
+        alert(
+          "Message envoyé, un conseillé vous contactera dans les plus bref délais"
+        )
+      );
   };
 
   return (
